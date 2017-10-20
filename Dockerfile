@@ -1,7 +1,7 @@
 # 基础镜像默认安装了python3
 FROM python:3-alpine3.6
 
-# LABEL maintainer "https://github.com/hermsi1337"
+# LABEL maintainer "https://github.com/monelgq/php-python-sshd"
 
 # 复制添加必要的文件
 COPY requirements.txt ./
