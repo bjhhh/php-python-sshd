@@ -12,6 +12,12 @@ ENV ROOT_PASSWORD root
 
 # 安装必要的命令行工具
 RUN  apk --update add \
+        gcc \
+        libffi-dev \
+        libxml2-dev \
+        libxslt-dev \
+        musl-dev \
+        openssl-dev \
         libressl \
         ca-certificates \
         rsync \
