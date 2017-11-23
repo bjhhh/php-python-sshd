@@ -4,7 +4,7 @@ FROM python:3-alpine3.6
 # LABEL maintainer "https://github.com/monelgq/php-python-sshd"
 
 # 复制添加必要的文件
-COPY requirements.txt ./
+COPY requirements.txt /
 COPY entrypoint.sh /usr/local/bin/
 
 # 默认的环境变量，ROOT_PASSWORD的默认值不要修改
@@ -37,7 +37,7 @@ RUN apk --update add openssh \
 		&& rm -rf /var/cache/apk/* /tmp/*
 
 # 安装要求的 python 库    
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 
 # 设置当前工作目录为python应用目录
 WORKDIR /usr/src/app
